@@ -11,6 +11,8 @@ std::string  roman_translate(std::array<std::string, 9> LUT, int multipler, int*
 public:
 std::string to_Roman(int arabic);
 
+int arabic_translate(std::string& roman, std::array<std::string, 9> LUT, int multipler);
+int to_Arabic(std::string roman);
 };
 
 

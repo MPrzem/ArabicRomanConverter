@@ -12,12 +12,9 @@
 
         const int thousand = *number / 1000;
         *number %= 1000;
-        const bool is_500 = (bool)(*number / 500);
 
         if (thousand == 0)
             return "";
-     //   else if (thousand == 1 && is_500)
-       //     return "MD";
         return thousandsLUT[thousand - 1];
     }
 
@@ -43,3 +40,29 @@
         return roman;
 
     }
+    int RomanArabicConverter::to_Arabic(std::string roman) {
+
+
+
+
+    }
+
+
+
+
+
+    int RomanArabicConverter::arabic_translate(std::string& roman, std::array<std::string, 9> LUT, int multipler) {
+        int rom_length = roman.length();
+        int elem_lenth;
+        for (size_t i = LUT.size()-1; i >=0 ; --i) {
+            elem_lenth = LUT[i].length();
+            if(rom_length >= elem_lenth)
+            if (roman.compare(rom_length - elem_lenth, elem_lenth, LUT[i]) == 0) {
+                roman = roman.substr(0, rom_length - elem_lenth);
+                return (i+1) * multipler;
+            }
+        }
+
+    }
+
+
