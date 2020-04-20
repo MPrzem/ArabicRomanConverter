@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Roman_Arabic_conv.cpp" />
   </ItemGroup>
   <ItemGroup>
