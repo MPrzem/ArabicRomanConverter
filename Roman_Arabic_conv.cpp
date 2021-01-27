@@ -1,10 +1,8 @@
 ﻿#include "Roman_Arabic_conv.h"
 
-
-
     inline std::string RomanArabicConverter::take_roman_thousands(int* number) {
 
-        const int thousand = *number / 1000;
+        const size_t thousand = *number / 1000;
         *number %= 1000;
 
         if (thousand == 0||thousand>4)
@@ -14,7 +12,7 @@
 
     inline std::string RomanArabicConverter::roman_translate(std::array<std::string, 9> LUT, int multipler, int* number) {
 
-        const int index = *number / multipler;
+        const size_t index = *number / multipler;
         *number %= multipler;
         if (index > 0 && index<9)
             return LUT[index - 1];
