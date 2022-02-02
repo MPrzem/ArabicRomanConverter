@@ -14,15 +14,17 @@
 
         const size_t index = *number / multipler;
         *number %= multipler;
-        if (index > 0 && index<9)
+        if (index > 0 && index<=9)
             return LUT[index - 1];
         else
             return "";
 
     }
     std::string RomanArabicConverter::to_Roman(int arabic) {
+        std::string roman="";
         if (arabic < 5000) {
-            std::string roman = take_roman_thousands(&arabic);
+            // if(arabic>=1000)
+            roman= take_roman_thousands(&arabic);
             int multipler = 100;
             for (unsigned char i = 0; i < 3; ++i) {
 
