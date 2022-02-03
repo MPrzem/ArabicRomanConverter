@@ -36,4 +36,3 @@ INSTANTIATE_TEST_CASE_P(CorrectValues, CoverterCorrectValuesTests, ::testing::Va
     CorrectDataTestParameters{"MMMCMXCIX",3999},
     CorrectDataTestParameters{"MMMMCMXCIX",4999}
 ));
-
