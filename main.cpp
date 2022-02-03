@@ -1,13 +1,10 @@
 #include <iostream>
 #include "Roman_Arabic_conv.h"
 
-int main() {
+int main()
+{
     RomanArabicConverter conv;
-
-    std::string roman = "MMMDCCCLXXXVIII";
-
-   std::cout<< conv.to_Arabic(roman)<<std::endl;
-   std::string tmp = conv.to_Roman(3888);
+    std::cout << conv.to_Arabic("MMMDCCCLXXXVIII") << std::endl;
     std::cout << conv.to_Roman(3888);
     return 0;
 }

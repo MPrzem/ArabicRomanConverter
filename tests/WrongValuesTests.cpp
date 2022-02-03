@@ -35,7 +35,6 @@ INSTANTIATE_TEST_CASE_P(WrongValuesA2R, WrongInputValuesTestsA2R, ::testing::Val
     682123
 ));
 
-
 TEST(CoverterWrongValuesTests,ShouldThrowWhenNull){
     RomanArabicConverter converter;
     ASSERT_THROW(converter.to_Arabic(nullptr),std::logic_error);
